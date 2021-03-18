@@ -11,9 +11,18 @@ function writePassword() {
     let spcChar =["!","@","#","$","%","&","?"]
     //create prompt for character length
     let passLength = window.prompt("Please enter length of password");
+    let lCaseP = confirm("add lowercase?");
+    let uCaseP = confirm("add uppercase?");
+    let num = confirm("add numbers?");
+    let spcC = confirm("add special Characters?");
     
     
-    //var password = generatePassword();
+    //create the generate pass word function
+    function generatePassword(){
+        let selectorArray = [];
+        
+    }
+    var password = generatePassword();
     var passwordText = document.querySelector("#password");
     console.log("The button has been pressed");
   
