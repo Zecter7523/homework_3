@@ -9,17 +9,30 @@ function writePassword() {
     let upperCase =["A","B","C","D","E","F","G","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"]
     let numbers =[1,2,3,4,5,6,7,8,9,0];
     let spcChar =["!","@","#","$","%","&","?"]
-    //create prompt for character length
+    failArray = lowerCase.concat(upperCase,spcChar);
+    //create prompt for character length and confirms for which arrays to concat
     let passLength = window.prompt("Please enter length of password");
+    //added fail state
+    if(8 > passLength || passLength > 120){
+        console.log("bruh");
+        return;
+    }
+    else if(isNaN(passLength)){
+        console.log("Dude.. no");
+        return;
+    }
+    
     let lCaseP = confirm("add lowercase?");
     let uCaseP = confirm("add uppercase?");
     let num = confirm("add numbers?");
     let spcC = confirm("add special Characters?");
+
     
     
-    //create the generate pass word function
+    //create the generatepassword function
     function generatePassword(){
         let selectorArray = [];
+
         
     }
     var password = generatePassword();
